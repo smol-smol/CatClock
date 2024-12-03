@@ -1,0 +1,71 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.light-mode {
+    background-color: pink;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#cat {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px; /* Increased width */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.5s ease;
+}
+
+.light-mode #cat {
+    transform: translateY(0);
+}
+
+.dark-mode #cat {
+    transform: translateY(20px);
+    content: url('cat-sleeping.png');
+}
+
+.clock {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#theme-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode #theme-toggle {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode #theme-toggle {
+    background-color: gray;
+    color: white;
+}
